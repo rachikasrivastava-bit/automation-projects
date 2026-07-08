@@ -48,33 +48,77 @@
 
 #3.  Build Login class with validation method
 
-class Login:
-    def __init__(self, user_name, password):
-        self.username = user_name
-        self.password = password
+# class Login:
+#     def __init__(self, user_name, password):
+#         self.username = user_name
+#         self.password = password
 
-    def validation(self):
-        valid_user = "Harry Potter"
-        valid_pass = "123456"
+#     def validation(self):
+#         valid_user = "Harry Potter"
+#         valid_pass = "123456"
 
-        if self.username == valid_user and self.password == valid_pass:
-            print("Login Successful")
-        else:
-            print("Invalid Username or Password")
+#         if self.username == valid_user and self.password == valid_pass:
+#             print("Login Successful")
+#         else:
+#             print("Invalid Username or Password")
 
 
-# User Input
-user_name = input("Enter Username: ")
-password = input("Enter Password: ")
+# # User Input
+# user_name = input("Enter Username: ")
+# password = input("Enter Password: ")
 
-# Create object
-obj = Login(user_name, password)
+# # Create object
+# obj = Login(user_name, password)
 
-# Call validation method
-obj.validation()
+# # Call validation method
+# obj.validation()
 
 # 4.  Create reusable login module
 
+# import Login as login_module
 
-#
+# uname = input("Enter Username: ")
+# pwd = input("Enter Password: ")
 
+# if login_module.login(uname, pwd):
+#     print("Login Successful")
+# else:
+#     print("Invalid Username or Password")
+
+
+# 5. Call GET API and print response
+
+
+
+# import requests
+
+# # API URL
+# url = "https://jsonplaceholder.typicode.com/posts/1"
+
+# # Send GET request
+# response = requests.get(url)
+
+# # Check status code
+# if response.status_code == 200:
+#     print("Response:")
+#     print(response.json())  # Print JSON response
+# else:
+#     print("Error:", response.status_code)
+
+#6.  Filter products with price < 50
+
+
+# List of products
+products = [
+    {"name": "Pen", "price": 10},
+    {"name": "Notebook", "price": 60},
+    {"name": "Pencil", "price": 5},
+    {"name": "Bag", "price": 100}
+]
+
+# Filter products with price < 50
+filtered_products = [product for product in products if product["price"] < 50]
+
+# Print filtered products
+for product in filtered_products:
+    print(product)

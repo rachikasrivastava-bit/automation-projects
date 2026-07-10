@@ -109,16 +109,41 @@
 
 
 # List of products
-products = [
-    {"name": "Pen", "price": 10},
-    {"name": "Notebook", "price": 60},
-    {"name": "Pencil", "price": 5},
-    {"name": "Bag", "price": 100}
-]
+# products = [
+#     {"name": "Pen", "price": 10},
+#     {"name": "Notebook", "price": 60},
+#     {"name": "Pencil", "price": 5},
+#     {"name": "Bag", "price": 100}
+# ]
 
-# Filter products with price < 50
-filtered_products = [product for product in products if product["price"] < 50]
+# # Filter products with price < 50
+# filtered_products = [product for product in products if product["price"] < 50]
 
-# Print filtered products
-for product in filtered_products:
-    print(product)
+# # Print filtered products
+# for product in filtered_products:
+#     print(product)
+
+import json
+import os
+import Login as login_module
+
+uname = input("Enter Username: ")
+pwd = input("Enter Password: ")
+
+if login_module.login(uname, pwd):
+    print("Login Successful")
+else:
+    print("Invalid Username or Password")
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, "MyFile.json")
+
+with open(file_path, "r", encoding="utf-8-sig") as file:
+    data = json.load(file)
+
+# print(data)
+print("The items in your cart are:")
+for item_dict in data:
+    # Get only the values from the current dictionary
+    item_values = list(item_dict.values())
+    print(item_values)

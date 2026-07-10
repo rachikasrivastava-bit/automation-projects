@@ -1,0 +1,36 @@
+[
+  {
+  "item1" : "Chair",
+  "itemPrice" : 2000.00,
+  "isInStock" : "yes",
+  "Material" : "MDF" 
+  },
+
+  {
+  "item2" : "Table",
+  "itemPrice" : 6500.50,
+  "isInStock" : "yes",
+  "Material" : "Sagwan" 
+  },
+
+  {
+  "item3" : "Coffee Table",
+  "itemPrice" : 7800.00,
+  "isInStock" : "yes",
+  "Material" : "MDF" 
+  },
+
+  {
+  "item4" : "Lamp shade",
+  "itemPrice" : 2000.00,
+  "isInStock" : "yes",
+  "Material" : "Jute & Fabric" 
+  },
+
+ {
+  "item5" : "Bean bag",
+  "itemPrice" : 1800.00,
+  "isInStock" : "yes",
+  "Material" : "Raxine" 
+  }
+]

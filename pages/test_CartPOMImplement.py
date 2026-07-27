@@ -8,8 +8,6 @@ from Login_page import LoginPage
 from Cart_page import SortAddCart
 from Checkout import Checkout_Page
 
-
-
 def test_e2e(page: Page):
     # Initialize Page Objects
     login_page = LoginPage(page)

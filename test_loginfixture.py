@@ -1,3 +1,5 @@
+import pytest
+
 from playwright.sync_api import expect
 
 # Simply pass the fixture names from conftest.py as arguments

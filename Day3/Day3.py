@@ -1,5 +1,5 @@
 
-import Login as login_module
+import Login1 as login_module
 
 uname = input("Enter Username: ")
 pwd = input("Enter Password: ")

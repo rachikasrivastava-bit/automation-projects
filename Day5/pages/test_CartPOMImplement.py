@@ -9,6 +9,8 @@ from Cart_page import SortAddCart
 from Checkout import Checkout_Page
 
 def test_e2e(page: Page):
+    browser = p.chromium.launch(headless=False)
+    page = browser.new_page()
     # Initialize Page Objects
     login_page = LoginPage(page)
     cart_page = SortAddCart(page)
@@ -31,10 +33,3 @@ def test_e2e(page: Page):
 
     # Final Assertion
     expect(checkout_page.complete_header).to_have_text("Thank you for your order!")
-
-if __name__ == "__main__":
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        page = browser.new_page()
-        test_e2e(page)
-        #browser.close()
